@@ -1,13 +1,19 @@
 import axios from 'axios';
 
 export const API_BASE = 'https://ophim1.com/v1/api';
-// Cập nhật domain ảnh mới từ source bạn gửi
-export const IMG_BASE = 'https://img.ophim.live/uploads/movies/'; 
+export const IMG_BASE = 'https://img.ophim.live/uploads/movies/';
 
+// Hàm lấy ảnh Poster/Thumb cũ
 export const getImageUrl = (url) => {
     if (!url) return 'https://via.placeholder.com/300x450?text=No+Image';
     if (url.startsWith('http')) return url;
     return `${IMG_BASE}${url}`;
+};
+
+// Hàm mới: Tạo link ảnh Backdrop từ TMDB (w1280)
+export const getTmdbImage = (path) => {
+    if (!path) return null;
+    return `https://image.tmdb.org/t/p/w1280${path}`;
 };
 
 export const fetcher = async (endpoint) => {

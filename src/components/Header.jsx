@@ -29,7 +29,7 @@ const Header = () => {
                 
                 {/* LOGO SOTPHIM (Đã sửa lại như cũ) */}
                 <Link to="/" className="text-2xl font-black tracking-tighter hover:scale-105 transition-transform flex items-center">
-                    <span className="text-white">SOT</span>
+                    <span className="text-white">SỌT</span>
                     <span className="text-red-600">PHIM</span>
                 </Link>
 

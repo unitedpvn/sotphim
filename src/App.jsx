@@ -6,10 +6,12 @@ import DetailPage from './pages/DetailPage';
 import WatchPage from './pages/WatchPage';
 import SearchPage from './pages/SearchPage';
 import CategoryPage from './pages/CategoryPage';
-
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <BrowserRouter>
+
+    <ScrollToTop />
       <div className="min-h-screen bg-[#111827] text-white font-sans flex flex-col">
         {/* Header luôn hiển thị ở trên cùng */}
         <Header />

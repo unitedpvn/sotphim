@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 body {
-    background-color: #111827; /* Màu nền tối cho web phim */
+    background-color: #111827;
     color: white;
+}
+
+/* Thanh cuộn tùy chỉnh */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #1f2937; 
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #dc2626; 
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ef4444; 
 }

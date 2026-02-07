@@ -13,7 +13,7 @@ const CategoryPage = ({ type }) => {
 
     useEffect(() => {
         setLoading(true);
-        const endpoint = `/${type}/${slug}?page=${page}&limit=24`; // Lấy 24 phim
+        const endpoint = `/${type}/${slug}?page=${page}&limit=24`;
 
         fetcher(endpoint).then(res => {
             setData(res?.data);
@@ -29,19 +29,18 @@ const CategoryPage = ({ type }) => {
     if (loading) return <div className="p-10 text-center text-gray-400 animate-pulse">Đang tải phim...</div>;
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h1 className="text-2xl font-bold mb-6 border-l-4 border-red-600 pl-3 text-white uppercase">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8">
+            <h1 className="text-xl md:text-2xl font-bold mb-6 border-l-4 border-red-600 pl-3 text-white uppercase">
                 {data?.titlePage || slug}
             </h1>
 
-            {/* Grid 24 phim chuẩn */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {/* Grid đồng bộ với HomePage: gap-2 trên mobile */}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-4">
                 {data?.items?.map(movie => (
                     <MovieCard key={movie._id} movie={movie} />
                 ))}
             </div>
 
-            {/* Pagination */}
             <div className="flex justify-center mt-12 gap-3">
                 <button 
                     disabled={page <= 1}
