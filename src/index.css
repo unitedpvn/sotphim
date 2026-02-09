@@ -48,3 +48,18 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: 900;
 }
+
+/* CSS cho Big Slide Thumbnails */
+.thumbs-swiper .swiper-slide {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.thumbs-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+/* Hiệu ứng viền đỏ khi chọn */
+.thumbs-swiper .swiper-slide-thumb-active img {
+    border: 2px solid #dc2626; /* Red-600 */
+}

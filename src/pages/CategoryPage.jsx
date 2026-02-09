@@ -29,7 +29,7 @@ const CategoryPage = ({ type }) => {
     if (loading) return <div className="p-10 text-center text-gray-400 animate-pulse">Đang tải phim...</div>;
 
     return (
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-12 py-8 pt-20">
             <h1 className="text-xl md:text-2xl font-bold mb-6 border-l-4 border-red-600 pl-3 text-white uppercase">
                 {data?.titlePage || slug}
             </h1>

@@ -117,7 +117,7 @@ const WatchPage = () => {
     };
 
     return (
-        <div className="bg-[#0a0a0a] min-h-screen pb-10">
+        <div className="bg-[#0a0a0a] min-h-screen pb-10 pt-20">
             
             {/* 1. KHUNG PLAYER */}
             <div className="w-full bg-black mb-6 border-b border-gray-800">

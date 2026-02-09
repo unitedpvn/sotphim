@@ -17,7 +17,7 @@ const SearchPage = () => {
     }, [keyword]);
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 pt-20">
             <h2 className="text-xl mb-6">Kết quả tìm kiếm cho: <span className="text-red-500 font-bold">{keyword}</span></h2>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {movies.map(movie => (
