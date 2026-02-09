@@ -2,24 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: #111827;
-    color: white;
+:root {
+  --bg-body: #080B1D;
+  --primary: #E50914;
 }
 
-/* Thanh cuộn tùy chỉnh */
-.custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+body {
+    background-color: var(--bg-body);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
 }
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: #1f2937; 
-    border-radius: 4px;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Nút điều hướng Swiper Custom (Giống Rổ Phim) */
+.sw-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
 }
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #dc2626; 
-    border-radius: 4px;
+.sw-button:hover {
+    background: var(--primary);
+    transform: scale(1.1);
 }
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #ef4444; 
+.sw-button.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Hiệu ứng Text Gradient */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
 }
